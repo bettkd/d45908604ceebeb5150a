@@ -1,0 +1,112 @@
+extends layout
+
+block content
+	h1= title
+	hr
+	<a href="/"> List of Internships </a>
+	h2 Add New Internship
+
+	form(id="frmInternship" action="/newinternship" method="post")
+		table.table-striped
+			tr
+				th
+					p Background
+				th
+					p Eligibility
+				th
+					p Application
+			tr
+				td
+					p
+						label(for="name") Name: 
+						input#name(type="text", name="name" required)
+					p
+						label(for="discipline") Discipline: 
+						input#discipline(type="text", name="discipline")
+					p
+						label(for="institution") Institution/Organization: 
+						input#institution(type="text", name="institution")
+					p
+						label(for="city") City: 
+						input#city(type="text", name="city")
+					p
+						label(for="state") State: 
+						input#state(type="text", name="state")
+					p
+						label(for="country") Country: 
+						input#country(type="text", name="country")
+					p
+						label(for="description") Description: 
+						textarea#description(rows="3", name="description")
+					p
+						label(for="website") Website: 
+						input#website(type="text", name="website" value="http://")
+					p
+						label(for="duration") Duration (weeks): 
+						input#duration(type="text", name="duration")
+					p
+						label(for="salary") Salary or Stipend: 
+						input#salary(type="text", name="salary")
+					p
+						label(for="courses") Courses Offered: 
+						input#courses(type="text", name="courses")
+				
+					p
+						label(for="housing") Housing: 
+						input#housing(type="text", name="housing")
+					p
+						label(for="transportation") Transportation: 
+						input#transportation(type="text", name="transportation")
+				td
+					p
+						label(for="citizenship") Citizenship: 
+						select#citizenship(name="citizenship" multiple)
+							option US Citizen
+							option Permanent Resident
+							option F1 Student Visa
+							option N/A
+					p
+						label(for="minority") Minority or Underrepresented: 
+						select#minority(name="minority" size="8" multiple)
+							option African American/Black
+							option Hispanic
+							option Native American
+							option Native Alaskan
+							option Pacific Islander
+							option Native Hawaiian
+							option Polynesian
+							option N/A
+					p
+						label(for="classification") Classification: 
+						select#classification(name="classification" size="5" multiple)
+							option Freshman
+							option Sophomore
+							option Junior
+							option Senior
+							option N/A
+					p
+						label(for="gpa") GPA: 
+						input#gpa(type="text", name="gpa" size="8")
+				td
+					p
+						label(for="statement") Personal Statement: 
+						input#statement(type="checkbox", name="statement")
+					p
+						label(for="recommendation") Recommendation: 
+						input#recommendation(type="number", name="recommendation" min="0" max="5")
+				
+					p
+						label(for="transcript") Trascript: 
+						input#transcript(type="checkbox", name="transcript")
+					p
+						label(for="deadline") Deadline: 
+						input#deadline(type="date", name="deadline" min="2013-01-02")
+					p
+						label(for="submision") Submission: 
+						select#submision(name="submision" multiple)
+							option Online
+							option Email
+							option Mail
+							option N/A
+		p
+			button.btn(id="btnAddInternship") Add Internship
