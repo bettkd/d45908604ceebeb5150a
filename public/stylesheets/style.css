@@ -1,0 +1,66 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background: #f6f6f6;
+  min-width: 1150px;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.table-striped {
+    padding: 0;
+    margin: 0;
+    border: 0 none;
+    width: 100%;
+}
+.table-striped td, th {
+    border-style: solid;
+    border-width: 0 0 1px 0;
+    border-color: #999999;
+    margin: 0;
+    font-size: 16px;
+}
+.table-striped tr {
+    padding: 0;
+    margin: 0;
+    border-width: 0;
+}
+
+.table-striped tr:nth-child(even) {
+    background-color: #ECECEC;
+}
+
+.table-striped tr:nth-child(odd) {
+    background-color: #CCCCCC;
+}
+
+.btn {
+	background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 7px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    float: right;
+}
+
+label {
+    width:180px;
+    clear:left;
+    text-align:right;
+    padding-right:10px;
+}
+
+input, label {
+    float:left;
+}
+
+p {
+	padding-bottom:12px;
+}
