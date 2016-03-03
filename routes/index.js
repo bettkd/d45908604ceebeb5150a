@@ -12,7 +12,9 @@ router.get('/', function(req, res, next) {
 
 	internRef.on("value", function(snapshot) {
 		viewObj.internships = snapshot.val();
-		console.log(viewObj.internships)
+		if (viewObj.internships == null){
+			res.redirect('/newinternship')
+		}
 		res.render('index', viewObj);
 	}, function (errorObject) {
 		console.log("The read failed...");
