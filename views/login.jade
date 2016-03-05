@@ -1,0 +1,17 @@
+extends layout
+
+block content
+	h1= title
+	hr
+	h2 Login
+	form(id="frmlogin" action="/login" method="post")
+		p #{err}
+
+		p
+			label(for="email") Username
+			input#email.focus(type="text", name="email", value= (!!email) ? email : "")
+		p
+			label(for="password") Password
+			input#password(type="password", name="password")
+		p
+			button.btn.left(id="btnLogin") Login

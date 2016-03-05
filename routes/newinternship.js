@@ -13,7 +13,13 @@ viewObj = {
 router.get('/', function(req, res) {
 
 
-	res.render('newinternship', viewObj);
+	var authData = ref.getAuth();
+
+	if (authData) {
+		res.render('newinternship', viewObj);
+	} else {
+		res.redirect('/login');
+	}
 });
 
 

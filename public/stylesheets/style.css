@@ -50,6 +50,12 @@ a {
     float: right;
 }
 
+.left {
+    clear: right;
+    float: left;
+    margin-left: 190px;
+}
+
 label {
     width:180px;
     clear:left;
