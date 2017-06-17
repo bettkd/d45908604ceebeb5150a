@@ -4,35 +4,39 @@ block content
 	h1= title
 	hr
 	<a href="/newinternship"> New Internship </a>
+
 	h2 List of Interships
 
 	table.table-striped
-		each internship in internships
+		each value, key in internships
 			tr
 				td
-					p <b> Name: </b> #{internship.name} <br /> <b> Added on: </b> #{internship.added}
+					p
+						<b> Name: </b> #{value.name} <br /> <b> Added on: </b> #{value.added}
+
 					ul
-						li <b> Discipline: </b> #{internship.discipline}
-						li <b> Institution: </b> #{internship.institution}
-						li <b> City: </b> #{internship.city}
-						li <b> State: </b> #{internship.state}
-						li <b> Country: </b> #{internship.country}
-						li <b> Description: </b> #{internship.description}
-						li <b> Website: </b> #{internship.website}
-						li <b> Duration: </b> #{internship.duration}
-						li <b> Salary: </b> #{internship.salary}
-						li <b> Courses: </b> #{internship.courses}
-						li <b> Housing: </b> #{internship.housing}
-						li <b> Transportation: </b> #{internship.transportation}
-						li <b> Citizenship: </b> #{internship.citizenship}
-						li <b> Minority: </b> #{internship.minority}
-						li <b> Classification: </b> #{internship.classification}
-						li <b> GPA: </b> #{internship.gpa}
-						li <b> Personal Statement: </b> #{internship.statement}
-						li <b> Recommendation: </b> #{internship.recommendation}
-						li <b> Transcript: </b> #{internship.transcript}
-						li <b> Deadline: </b> #{internship.deadline}
-						li <b> Submission: </b> #{internship.submision}
+						li <b> Discipline: </b> #{value.discipline}
+						li <b> Institution: </b> #{value.institution}
+						li <b> City: </b> #{value.city}
+						li <b> State: </b> #{value.state}
+						li <b> Country: </b> #{value.country}
+						li <b> Description: </b> #{value.description}
+						li <b> Website: </b> #{value.website}
+						li <b> Duration: </b> #{value.duration}
+						li <b> Salary: </b> #{value.salary}
+						li <b> Courses: </b> #{value.courses}
+						li <b> Housing: </b> #{value.housing}
+						li <b> Transportation: </b> #{value.transportation}
+						li <b> Citizenship: </b> #{value.citizenship}
+						li <b> Minority: </b> #{value.minority}
+						li <b> Classification: </b> #{value.classification}
+						li <b> GPA: </b> #{value.gpa}
+						li <b> Personal Statement: </b> #{value.statement}
+						li <b> Recommendation: </b> #{value.recommendation}
+						li <b> Transcript: </b> #{value.transcript}
+						li <b> Deadline: </b> #{value.deadline}
+						li <b> Submission: </b> #{value.submision}
+						p <a href="editinternship?id=#{key}">  Edit </a>
 
 
 

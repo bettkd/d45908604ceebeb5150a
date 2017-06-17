@@ -9,6 +9,10 @@ a {
   color: #00B7FF;
 }
 
+h1 {
+    color: #691D99;
+}
+
 .table-striped {
     padding: 0;
     margin: 0;
@@ -48,6 +52,7 @@ a {
     margin: 4px 2px;
     cursor: pointer;
     float: right;
+    margin-right: 50px;
 }
 
 .left {
@@ -69,4 +74,8 @@ input, label {
 
 p {
 	padding-bottom:12px;
+}
+
+.hidden {
+    display: none;
 }

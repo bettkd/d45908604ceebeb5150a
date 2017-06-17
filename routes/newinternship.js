@@ -5,8 +5,8 @@ var express = require('express');
 	Firebase = require('firebase');
 	ref = new Firebase("https://internstem.firebaseio.com");
 
-viewObj = {
-	title: 'InternSTEM Admin'
+var viewObj = {
+	title: 'STEAMtern Admin'
 }
 
 /* GET home page. */
@@ -47,7 +47,7 @@ router.post('/', function(req, res) {
 		recommendation: req.body.recommendation || '0',
 		transcript: (req.body.transcript == 'on') ? 'true' : 'false',
 		deadline: req.body.deadline || 'N/A',
-		submision: req.body.submision || 'N/A',
+		submision: req.body.submision || ['N/A'],
 		added: Date.today().toFormat('YYYY-MM-DD')
 	}
 

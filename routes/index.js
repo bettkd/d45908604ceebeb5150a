@@ -1,12 +1,14 @@
 var express = require('express');
 	router = express.Router();
 	Firebase = require('firebase');
-	internRef = new Firebase("https://internstem.firebaseio.com/internships");
+	internsRef = new Firebase("https://internstem.firebaseio.com/internships");
 	ref = new Firebase("https://internstem.firebaseio.com");
 
-viewObj = {
-	title: 'InternSTEM Admin'
+var viewObj = {
+	title: 'STEAMtern Admin'
 }
+
+viewObj.internships = null;
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -15,7 +17,7 @@ router.get('/', function(req, res, next) {
 
 	if (authData) {
 		
-		internRef.on("value", function(snapshot) {
+		internsRef.on("value", function(snapshot) {
 			viewObj.internships = snapshot.val();
 			if (viewObj.internships == null){
 				res.redirect('/newinternship')
@@ -28,5 +30,6 @@ router.get('/', function(req, res, next) {
 		res.redirect('/login');
 	}
 });
+
 
 module.exports = router;

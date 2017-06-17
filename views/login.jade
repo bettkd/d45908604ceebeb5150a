@@ -8,8 +8,8 @@ block content
 		p #{err}
 
 		p
-			label(for="email") Username
-			input#email.focus(type="text", name="email", value= (!!email) ? email : "")
+			label(for="email") Email
+			input#email(type="text", name="email", value= (!!email) ? email : "")
 		p
 			label(for="password") Password
 			input#password(type="password", name="password")

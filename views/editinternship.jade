@@ -1,0 +1,91 @@
+extends layout
+
+block content
+	h1= title
+	hr
+	<a href="/"> List of Internships </a> |
+	<a href="/newinternship"> New Internship </a>
+	
+	h2 Edit Intership
+
+	form(id="frmInternship" action="/editinternship" method="post")
+		table.table-striped
+			tr
+				td
+					p
+						label(for="name") Name: 
+						input#name(type="text", name="name", value= (!!internship.name) ? internship.name : "")
+					p
+						label(for="discipline") Discipline:
+						input#discipline(type="text", name="discipline", value= (!!internship.discipline) ? internship.discipline : "")
+					p
+						label(for="institution") Institution:
+						input#institution(type="text", name="institution", value= (!!internship.institution) ? internship.institution : "")
+					p
+						label(for="city") City:
+						input#city(type="text", name="city", value= (!!internship.city) ? internship.city : "")
+					p
+						label(for="state") State:
+						input#state(type="text", name="state", value= (!!internship.state) ? internship.state : "")
+					p
+						label(for="country") Country:
+						input#country(type="text", name="country", value= (!!internship.country) ? internship.country : "")
+					p
+						label(for="description") Descripti3n: 
+						textarea#description(rows="6", cols="50", name="description") #{(!!internship.description) ? internship.description : "")}
+					p
+						label(for="website") Website:
+						input#website(type="text", name="website", value= (!!internship.website) ? internship.website : "")
+					p
+						label(for="duration") Duration:
+						input#duration(type="text", name="duration", value= (!!internship.duration) ? internship.duration : "")
+					p
+						label(for="salary") Salary:
+						input#salary(type="text", name="salary", value= (!!internship.salary) ? internship.salary : "")
+					p
+						label(for="courses") Courses:
+						input#courses(type="text", name="courses", value= (!!internship.courses) ? internship.courses : "")
+					p
+						label(for="housing") Housing:
+						input#housing(type="text", name="housing", value= (!!internship.housing) ? internship.housing : "")
+					p
+						label(for="transportation") Transportation:
+						input#transportation(type="text", name="transportation", value= (!!internship.transportation) ? internship.transportation : "")
+					p
+						label(for="citizenship") Citizenship:
+						input#citizenship(type="text", name="citizenship", value= (!!internship.citizenship) ? internship.citizenship : "")
+					p
+						label(for="minority") Minority:
+						input#minority(type="text", name="minority", value= (!!internship.minority) ? internship.minority : "")
+					p
+						label(for="classification") Classification:
+						input#classification(type="text", name="classification", value= (!!internship.classification) ? internship.classification : "")
+					p
+						label(for="gpa") GPA:
+						input#gpa(type="text", name="gpa", value= (!!internship.gpa) ? internship.gpa : "")
+					p
+						label(for="statement") Personal Statement:
+						input#statement(type="text", name="statement", value= (!!internship.statement) ? internship.statement : "")
+					p
+						label(for="recommendation") Recommendation:
+						input#recommendation(type="text", name="recommendation", value= (!!internship.recommendation) ? internship.recommendation : "")
+					p
+						label(for="transcript") Transcript:
+						input#transcript(type="text", name="transcript", value= (!!internship.transcript) ? internship.transcript : "")
+					p
+						label(for="deadline") Deadline:
+						input#deadline(type="text", name="deadline", value= (!!internship.deadline) ? internship.deadline : "")
+					p
+						label(for="submision") Submission:
+						input#submision(type="text", name="submision", value= (!!internship.submision) ? internship.submision : "")
+					p.hidden
+						label(for="id") Submission:
+						input#submision(type="text", name="id", value= (!!id) ? id : "")
+			tr
+				td
+					button.btn.left(id="btnSave") Save
+
+
+
+
+

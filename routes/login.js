@@ -6,7 +6,7 @@ var express = require('express');
 	ref = new Firebase("https://internstem.firebaseio.com");
 
 viewObj = {
-	title: 'InternSTEM Admin'
+	title: 'STEAMtern Admin'
 }
 
 /* GET home page. */
@@ -26,6 +26,8 @@ router.post('/', function(req, res) {
 	var email = req.body.email;
 	var password = req.body.password;
 
+	var adminEmails = ["admin@internstem.com", ];
+
 	// Create a callback to handle the result of the authentication
 	function authHandler(error, authData) {
 		if (error) {
@@ -38,10 +40,14 @@ router.post('/', function(req, res) {
 	 	}
 	}
 
-	ref.authWithPassword({
-		email    : email,
-		password : password
-	}, authHandler);
+	if (adminEmails.indexOf(email) != -1) { // Only provide login privilege to admins
+		ref.authWithPassword({
+			email    : email,
+			password : password
+		}, authHandler);
+	} else{
+		return res.redirect("/");
+	}
 });
 
 module.exports = router;
