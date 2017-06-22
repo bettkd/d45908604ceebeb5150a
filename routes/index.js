@@ -1,7 +1,7 @@
-var express = require('express');
-	router = express.Router();
-	Firebase = require('firebase');
-	internsRef = new Firebase("https://internstem.firebaseio.com/internships");
+var express = require('express'),
+	router = express.Router(),
+	Firebase = require('firebase'),
+	internsRef = new Firebase("https://internstem.firebaseio.com/internships"),
 	ref = new Firebase("https://internstem.firebaseio.com");
 
 var viewObj = {

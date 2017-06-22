@@ -1,0 +1,133 @@
+extends layout
+
+block content
+	h1= title
+	h2.title Intership Details
+	hr
+	nav.box-1
+		a(href='/')
+			span.glyphicon.glyphicon-home 
+			| Home
+		a(href='/editinternship?id=#{id}')
+			span.glyphicon.glyphicon-edit
+			| Edit
+		a(href='/newinternship')
+			span.glyphicon.glyphicon-plus
+			| New
+
+	table.table.table-striped.table-hover.box-1
+		tr
+			th
+				| TERM
+			th
+				| DESCRIPTION
+		tr
+			td
+				b Name
+			td
+				| #{internship.name} 
+		tr
+			td
+				b Discipline
+			td
+				| #{internship.discipline}
+		tr
+			td
+				b Institution
+			td
+				| #{internship.institution}
+		tr
+			td
+				b City
+			td
+				| #{internship.city}
+		tr
+			td
+				b State
+			td
+				| #{internship.state}
+		tr
+			td
+				b Country
+			td
+				| #{internship.country}
+		tr
+			td
+				b Description
+			td
+				| #{internship.description}
+		tr
+			td
+				b Website
+			td
+				| #{internship.website}
+		tr
+			td
+				b Duration
+			td
+				| #{internship.duration}
+		tr
+			td
+				b Salary
+			td
+				| #{internship.salary}
+		tr
+			td
+				b Courses
+			td
+				| #{internship.courses}
+		tr
+			td
+				b Housing
+			td
+				| #{internship.housing}
+		tr
+			td
+				b Transportation
+			td
+				| #{internship.transportation}
+		tr
+			td
+				b Citizenship
+			td
+				| #{internship.citizenship}
+		tr
+			td
+				b Minority
+			td
+				| #{internship.minority}
+		tr
+			td
+				b Classification
+			td
+				| #{internship.classification}
+		tr
+			td
+				b GPA
+			td
+				| #{internship.gpa}
+		tr
+			td
+				b Personal Statement
+			td
+				| #{internship.statement}
+		tr
+			td
+				b Recommendation
+			td
+				| #{internship.recommendation}
+		tr
+			td
+				b Transcript
+			td
+				| #{internship.transcript}
+		tr
+			td
+				b Deadline
+			td
+				| #{internship.deadline}
+		tr
+			td
+				b Submission
+			td
+				| #{internship.submision}

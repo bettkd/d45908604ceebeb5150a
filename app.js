@@ -1,15 +1,17 @@
 var express = require('express');
-var path = require('path');
-var favicon = require('serve-favicon');
-var logger = require('morgan');
-var cookieParser = require('cookie-parser');
-var bodyParser = require('body-parser');
+    path = require('path'),
+    favicon = require('serve-favicon'),
+    logger = require('morgan'),
+    cookieParser = require('cookie-parser'),
+    bodyParser = require('body-parser');
 
-var routes = require('./routes/index');
-var users = require('./routes/users');
-var newinternship = require('./routes/newinternship');
-var login = require('./routes/login');
-var editinternship = require('./routes/editinternship');
+var routes = require('./routes/index'),
+    users = require('./routes/users'),
+    newinternship = require('./routes/newinternship'),
+    login = require('./routes/login'),
+    editinternship = require('./routes/editinternship'),
+    viewinternship = require('./routes/viewinternship');
+
 
 var app = express();
 
@@ -30,6 +32,7 @@ app.use('/users', users);
 app.use('/newinternship', newinternship);
 app.use('/login', login);
 app.use('/editinternship', editinternship);
+app.use('/viewinternship', viewinternship);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

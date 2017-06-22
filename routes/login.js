@@ -1,8 +1,8 @@
-var express = require('express');
-	router = express.Router();
-	crypto = require('crypto');
-	date_utils = require('date-utils')
-	Firebase = require('firebase');
+var express = require('express'),
+	router = express.Router(),
+	crypto = require('crypto'),
+	date_utils = require('date-utils'),
+	Firebase = require('firebase'),
 	ref = new Firebase("https://internstem.firebaseio.com");
 
 viewObj = {

@@ -2,43 +2,27 @@ extends layout
 
 block content
 	h1= title
+	h2.title List of Interships
 	hr
-	<a href="/newinternship"> New Internship </a>
+	nav.box-1
+		a(href='/newinternship')
+			span.glyphicon.glyphicon-plus
+			| New
 
-	h2 List of Interships
 
-	table.table-striped
+	table.table.table-striped.table-hover.box-1
+		tr
+			th
+				| Name
+			th
+				| Deadline
+			th
+				Date Added
 		each value, key in internships
 			tr
 				td
-					p
-						<b> Name: </b> #{value.name} <br /> <b> Added on: </b> #{value.added}
-
-					ul
-						li <b> Discipline: </b> #{value.discipline}
-						li <b> Institution: </b> #{value.institution}
-						li <b> City: </b> #{value.city}
-						li <b> State: </b> #{value.state}
-						li <b> Country: </b> #{value.country}
-						li <b> Description: </b> #{value.description}
-						li <b> Website: </b> #{value.website}
-						li <b> Duration: </b> #{value.duration}
-						li <b> Salary: </b> #{value.salary}
-						li <b> Courses: </b> #{value.courses}
-						li <b> Housing: </b> #{value.housing}
-						li <b> Transportation: </b> #{value.transportation}
-						li <b> Citizenship: </b> #{value.citizenship}
-						li <b> Minority: </b> #{value.minority}
-						li <b> Classification: </b> #{value.classification}
-						li <b> GPA: </b> #{value.gpa}
-						li <b> Personal Statement: </b> #{value.statement}
-						li <b> Recommendation: </b> #{value.recommendation}
-						li <b> Transcript: </b> #{value.transcript}
-						li <b> Deadline: </b> #{value.deadline}
-						li <b> Submission: </b> #{value.submision}
-						p <a href="editinternship?id=#{key}">  Edit </a>
-
-
-
-
-
+					a(href='/viewinternship?id=#{key}') #{value.name} 
+				td
+					| #{value.deadline}
+				td
+					| #{value.added}

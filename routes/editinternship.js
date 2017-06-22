@@ -1,6 +1,6 @@
-var express = require('express');
-	router = express.Router();
-	Firebase = require('firebase');
+var express = require('express'),
+	router = express.Router(),
+	Firebase = require('firebase'),
 	ref = new Firebase('https://internstem.firebaseio.com');
 
 var internshipID;
@@ -23,7 +23,6 @@ router.get('/', function(req, res, next) {
 			internRef = new Firebase('https://internstem.firebaseio.com/internships/' + internshipID);
 			internRef.on('value', function(snapshot) {
 				var internship = snapshot.val();
-				console.log(internship)
 				if (internship == null){
 					res.redirect('/')
 				}

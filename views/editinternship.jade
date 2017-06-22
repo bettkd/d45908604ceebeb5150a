@@ -2,88 +2,146 @@ extends layout
 
 block content
 	h1= title
+	h2.title Edit Intership
 	hr
-	<a href="/"> List of Internships </a> |
-	<a href="/newinternship"> New Internship </a>
+	nav.box-1
+		a(href='/')
+			span.glyphicon.glyphicon-home 
+			| Home
+		a(href='/newinternship')
+			span.glyphicon.glyphicon-plus
+			| New
 	
-	h2 Edit Intership
 
 	form(id="frmInternship" action="/editinternship" method="post")
-		table.table-striped
-			tr
-				td
-					p
-						label(for="name") Name: 
+		table.table.table-striped.table-hover.box-1
+			thead
+				tr
+					th
+						| TERM
+					th
+						| DESCRIPTION
+			tbody
+				tr
+					td
+						label(for="name") Name
+					td
 						input#name(type="text", name="name", value= (!!internship.name) ? internship.name : "")
-					p
-						label(for="discipline") Discipline:
+				tr
+					td
+						label(for="discipline") Discipline
+					td
 						input#discipline(type="text", name="discipline", value= (!!internship.discipline) ? internship.discipline : "")
-					p
-						label(for="institution") Institution:
+				tr
+					td
+						label(for="institution") Institution
+					td
 						input#institution(type="text", name="institution", value= (!!internship.institution) ? internship.institution : "")
-					p
+				tr
+					td
 						label(for="city") City:
+					td
 						input#city(type="text", name="city", value= (!!internship.city) ? internship.city : "")
-					p
+				tr
+					td
 						label(for="state") State:
+					td
 						input#state(type="text", name="state", value= (!!internship.state) ? internship.state : "")
-					p
+				tr
+					td
 						label(for="country") Country:
+					td
 						input#country(type="text", name="country", value= (!!internship.country) ? internship.country : "")
-					p
-						label(for="description") Descripti3n: 
+				tr
+					td
+						label(for="description") Description
+					td
 						textarea#description(rows="6", cols="50", name="description") #{(!!internship.description) ? internship.description : "")}
-					p
-						label(for="website") Website:
+				tr
+					td
+						label(for="website") Website
+					td
 						input#website(type="text", name="website", value= (!!internship.website) ? internship.website : "")
-					p
-						label(for="duration") Duration:
+				tr
+					td
+						label(for="duration") Duration
+					td
 						input#duration(type="text", name="duration", value= (!!internship.duration) ? internship.duration : "")
-					p
-						label(for="salary") Salary:
+				tr
+					td
+						label(for="salary") Salary
+					td
 						input#salary(type="text", name="salary", value= (!!internship.salary) ? internship.salary : "")
-					p
-						label(for="courses") Courses:
+				tr
+					td
+						label(for="courses") Courses
+					td
 						input#courses(type="text", name="courses", value= (!!internship.courses) ? internship.courses : "")
-					p
-						label(for="housing") Housing:
+				tr
+					td
+						label(for="housing") Housing
+					td
 						input#housing(type="text", name="housing", value= (!!internship.housing) ? internship.housing : "")
-					p
-						label(for="transportation") Transportation:
+				tr
+					td
+						label(for="transportation") Transportation
+					td
 						input#transportation(type="text", name="transportation", value= (!!internship.transportation) ? internship.transportation : "")
-					p
-						label(for="citizenship") Citizenship:
+				tr
+					td
+						label(for="citizenship") Citizenship
+					td
 						input#citizenship(type="text", name="citizenship", value= (!!internship.citizenship) ? internship.citizenship : "")
-					p
-						label(for="minority") Minority:
+				tr
+					td
+						label(for="minority") Minority
+					td
 						input#minority(type="text", name="minority", value= (!!internship.minority) ? internship.minority : "")
-					p
-						label(for="classification") Classification:
+				tr
+					td
+						label(for="classification") Classification
+					td
 						input#classification(type="text", name="classification", value= (!!internship.classification) ? internship.classification : "")
-					p
-						label(for="gpa") GPA:
+				tr
+					td
+						label(for="gpa") GPA
+					td
 						input#gpa(type="text", name="gpa", value= (!!internship.gpa) ? internship.gpa : "")
-					p
-						label(for="statement") Personal Statement:
+				tr
+					td
+						label(for="statement") Personal Statement
+					td
 						input#statement(type="text", name="statement", value= (!!internship.statement) ? internship.statement : "")
-					p
-						label(for="recommendation") Recommendation:
+				tr
+					td
+						label(for="recommendation") Recommendation
+					td
 						input#recommendation(type="text", name="recommendation", value= (!!internship.recommendation) ? internship.recommendation : "")
-					p
+				tr
+					td
 						label(for="transcript") Transcript:
+					td
 						input#transcript(type="text", name="transcript", value= (!!internship.transcript) ? internship.transcript : "")
-					p
-						label(for="deadline") Deadline:
+				tr
+					td
+						label(for="deadline") Deadline
+					td
 						input#deadline(type="text", name="deadline", value= (!!internship.deadline) ? internship.deadline : "")
-					p
-						label(for="submision") Submission:
+				tr
+					td
+						label(for="submision") Submission
+					td
 						input#submision(type="text", name="submision", value= (!!internship.submision) ? internship.submision : "")
-					p.hidden
-						label(for="id") Submission:
+				tr.hidden
+					td
+						label(for="id") Submission
+					td
 						input#submision(type="text", name="id", value= (!!id) ? id : "")
-			tr
-				td
-					button.btn.left(id="btnSave") Save
+				tr
+					td(colspan=2)
+						button.btn.btn-save(id="btnSave")
+							span.glyphicon.glyphicon-floppy-disk
+							| Save
 
 
 

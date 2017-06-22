@@ -2,73 +2,103 @@ extends layout
 
 block content
 	h1= title
+	h2.title New Internship
 	hr
-	<a href="/"> List of Internships </a>
+	nav.box-1
+		a(href='/')
+			span.glyphicon.glyphicon-home 
+			| Home
 
-	h2 Add New Internship
 
 	form(id="frmInternship" action="/newinternship" method="post")
-		table.table-striped
-			tr
-				th
-					p Background
-				th
-					p Eligibility
-				th
-					p Application
-			tr
-				td
-					p
-						label(for="name") Name: 
+		table.table.table-striped.table-hover.box-1
+			thead
+				tr
+					th
+						| TERM
+					th
+						| DESCRIPTION
+			tbody
+				tr
+					td
+						label(for="name") Name 
+					td
 						input#name(type="text", name="name" required)
-					p
-						label(for="discipline") Discipline: 
+				tr
+					td
+						label(for="discipline") Discipline 
+					td
 						input#discipline(type="text", name="discipline")
-					p
-						label(for="institution") Institution/Organization: 
+				tr
+					td
+						label(for="institution") Institution/Organization 
+					td
 						input#institution(type="text", name="institution")
-					p
-						label(for="city") City: 
+				tr
+					td
+						label(for="city") City 
+					td
 						input#city(type="text", name="city")
-					p
-						label(for="state") State: 
+				tr
+					td
+						label(for="state") State 
+					td
 						input#state(type="text", name="state")
-					p
-						label(for="country") Country: 
+				tr
+					td
+						label(for="country") Country 
+					td
 						input#country(type="text", name="country")
-					p
-						label(for="description") Description: 
+				tr
+					td
+						label(for="description") Description 
+					td
 						textarea#description(rows="3", name="description")
-					p
-						label(for="website") Website: 
-						input#website(type="text", name="website" value="http://")
-					p
-						label(for="duration") Duration (weeks): 
+				tr
+					td
+						label(for="website") Website 
+					td
+						input#website(type="text", name="website" value="http//")
+				tr
+					td
+						label(for="duration") Duration (weeks) 
+					td
 						input#duration(type="text", name="duration")
-					p
-						label(for="salary") Salary or Stipend: 
+				tr
+					td
+						label(for="salary") Salary or Stipend 
+					td
 						input#salary(type="text", name="salary")
-					p
-						label(for="courses") Courses Offered: 
+				tr
+					td
+						label(for="courses") Courses Offered 
+					td
 						input#courses(type="text", name="courses")
-				
-					p
-						label(for="housing") Housing: 
+			
+				tr
+					td
+						label(for="housing") Housing 
+					td
 						input#housing(type="text", name="housing")
-					p
-						label(for="transportation") Transportation: 
+				tr
+					td
+						label(for="transportation") Transportation 
+					td
 						input#transportation(type="text", name="transportation")
-				td
-					p
-						label(for="citizenship") Citizenship: 
-						select#citizenship(name="citizenship" multiple)
+				tr
+					td
+						label(for="citizenship") Citizenship 
+					td
+						select#ms-citizenship(name="citizenship" multiple)
 							option US Citizen
 							option Permanent Resident
 							option F1 Student Visa
 							option N/A
-					p
-						label(for="minority") Minority or Underrepresented: 
-						select#minority(name="minority" size="8" multiple)
+				tr
+					td
+						label(for="minority") Minority or Underrepresented 
+					td
+						select#ms-minority(name="minority" size="8" multiple)
 							option African American/Black
 							option Hispanic
 							option Native American
@@ -77,37 +107,53 @@ block content
 							option Native Hawaiian
 							option Polynesian
 							option N/A
-					p
-						label(for="classification") Classification: 
+				tr
+					td
+						label(for="ms-classification") Classification 
+					td
 						select#classification(name="classification" size="5" multiple)
 							option Freshman
 							option Sophomore
 							option Junior
 							option Senior
 							option N/A
-					p
-						label(for="gpa") GPA: 
+				tr
+					td
+						label(for="gpa") GPA 
+					td
 						input#gpa(type="text", name="gpa" size="8")
-				td
-					p
-						label(for="statement") Personal Statement: 
+				tr
+					td
+						label(for="statement") Personal Statement 
+					td
 						input#statement(type="checkbox", name="statement")
-					p
-						label(for="recommendation") Recommendation: 
+				tr
+					td
+						label(for="recommendation") Recommendation 
+					td
 						input#recommendation(type="number", name="recommendation" min="0" max="5")
-				
-					p
-						label(for="transcript") Trascript: 
+			
+				tr
+					td
+						label(for="transcript") Trascript 
+					td
 						input#transcript(type="checkbox", name="transcript")
-					p
-						label(for="deadline") Deadline: 
+				tr
+					td
+						label(for="deadline") Deadline 
+					td
 						input#deadline(type="date", name="deadline" min="2013-01-02")
-					p
-						label(for="submision") Submission: 
-						select#submision(name="submision" multiple)
+				tr
+					td
+						label(for="submision") Submission 
+					td
+						select#ms-submision(name="submision" multiple)
 							option Online
 							option Email
 							option Mail
 							option N/A
-		p
-			button.btn(id="btnAddInternship") Add Internship
+				tr
+					td(colspan=2)
+						button.btn.btn-save(id="btnAddInternship")
+							span.glyphicon.glyphicon-floppy-disk
+							| Save
