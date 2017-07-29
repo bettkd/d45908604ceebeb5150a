@@ -27,7 +27,7 @@ router.post('/', function(req, res) {
 
 	var internship = {
 		name: req.body.name,
-		discipline: req.body.discipline || 'N/A',
+		discipline: req.body.discipline || ['N/A'],
 		institution: req.body.institution || 'N/A',
 		city: req.body.city || 'N/A',
 		state: req.body.state || 'N/A',

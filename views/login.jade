@@ -7,11 +7,19 @@ block content
 	form(id="frmlogin" action="/login" method="post")
 		p #{err}
 
-		p
-			label(for="email") Email
-			input#email(type="text", name="email", value= (!!email) ? email : "")
-		p
-			label(for="password") Password
-			input#password(type="password", name="password")
-		p
-			button.btn.left(id="btnLogin") Login
+		table.table.login-box
+			tr
+				td
+					label(for="email") Email
+				td
+					input#email(type="text", name="email", value= (!!email) ? email : "")
+			tr
+				td
+					label(for="password") Password
+				td
+					input#password(type="password", name="password")
+			tr
+				td(colspan=2)
+					button.btn.btn-save(id="btnLogin")
+							span.glyphicon.glyphicon-log-in
+							| Login

@@ -4,4 +4,5 @@ $(document).ready(function(){
 	$("#ms-minority").multiselect();
 	$("#ms-classification").multiselect();
 	$("#ms-submision").multiselect();
+	$("#ms-discipline").multiselect();
 })
