@@ -73,6 +73,7 @@ nav a::after {
 
 input, label {
     float:left;
+    min-width: 240px;
 }
 
 .table>tbody>tr>td, .table>thead>tr>th {

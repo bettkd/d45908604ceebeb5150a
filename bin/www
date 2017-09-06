@@ -4,11 +4,14 @@
  * Module dependencies.
  */
 
-var app = require('../app');
+var app = require('../server');
 var debug = require('debug')('internstemadmin:server');
 var http = require('http');
+
+//firebase
 var Firebase = require('firebase'),
   ref = new Firebase("https://internstem.firebaseio.com");
+
 /**
  * Get port from environment and store in Express.
  */

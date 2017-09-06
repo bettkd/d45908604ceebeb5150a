@@ -1,3 +1,4 @@
+//dependancies
 var express = require('express');
     path = require('path'),
     favicon = require('serve-favicon'),
@@ -5,12 +6,24 @@ var express = require('express');
     cookieParser = require('cookie-parser'),
     bodyParser = require('body-parser');
 
+//routes
 var routes = require('./routes/index'),
     users = require('./routes/users'),
     newinternship = require('./routes/newinternship'),
     login = require('./routes/login'),
     editinternship = require('./routes/editinternship'),
     viewinternship = require('./routes/viewinternship');
+
+
+//firebase admin
+var admin = require("firebase-admin");
+var serviceAccount = require("./bin/STEAMtern-6d4651cfb3a4.json");
+if(admin.apps.length == 0) {
+  admin.initializeApp({
+    credential: admin.credential.cert(serviceAccount),
+    databaseURL: "https://internstem.firebaseio.com"
+  });
+}
 
 
 var app = express();
