@@ -18,11 +18,11 @@ router.post('/user/register', (req, res) => {
 	user.register.post(data, (error, result)=>{
 		if(error){
 			res.setHeader('Access-Control-Allow-Methods', 'POST');
-    			res.setHeader('Access-Control-Allow-Origin', 'http://*.steamtern.*', 'http://d45908604ceebeb5150a.*');
+    			res.setHeader('Access-Control-Allow-Origin', 'http://www.steamtern.com');
 			res.send({'error': error});
 		} else {
 			res.setHeader('Access-Control-Allow-Methods', 'POST');
-    			res.setHeader('Access-Control-Allow-Origin', 'http://*.steamtern.*', 'http://d45908604ceebeb5150a.*');
+    			res.setHeader('Access-Control-Allow-Origin', 'http://www.steamtern.com');
 			res.send({'success': result})
 		}
 
@@ -32,7 +32,7 @@ router.post('/user/register', (req, res) => {
 router.get('/user/count', (req, res) => {
 	user.count.get(req, (err, result)=> {
 		res.setHeader('Access-Control-Allow-Methods', 'GET');
-    		res.setHeader('Access-Control-Allow-Origin', 'http://*.steamtern.*');
+    		res.setHeader('Access-Control-Allow-Origin', 'http://www.steamtern.com');
 		res.send({'value': result});
 	});
 });
