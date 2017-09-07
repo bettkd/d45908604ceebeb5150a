@@ -8,7 +8,7 @@ var express = require('express');
 
 //routes
 var routes = require('./routes/index'),
-    users = require('./routes/users'),
+    api = require('./routes/api'),
     newinternship = require('./routes/newinternship'),
     login = require('./routes/login'),
     editinternship = require('./routes/editinternship'),
@@ -41,7 +41,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
-app.use('/users', users);
+app.use('/api', api);
 app.use('/newinternship', newinternship);
 app.use('/login', login);
 app.use('/editinternship', editinternship);
