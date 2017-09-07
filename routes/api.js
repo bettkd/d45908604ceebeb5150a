@@ -3,7 +3,7 @@ const express = require('express');
 const router = express.Router();
 
 //models
-var User = require('./users');
+var User = require('../models/users');
 var user = new User();
 
 //routes
